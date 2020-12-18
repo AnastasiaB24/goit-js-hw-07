@@ -1,0 +1,42 @@
+
+.ikon{
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	
+
+
+	
+	
+}
+.picture{
+	width: 900px;
+	height: 600px;
+}
+
+
+#counter{
+	margin-bottom: 60px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color:  #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+#font-size-control{
+	display: block;
+	margin-bottom: 40px;
+	margin-top: 60px ;
+}
