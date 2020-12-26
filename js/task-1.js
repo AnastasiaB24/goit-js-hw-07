@@ -1,8 +1,9 @@
-const liItemRef = document.querySelectorAll(`.item`)
-console.log(`Всего ${liItemRef.length} категории`)
-for (let i = 0; i < liItemRef.length; i++) {
-  console.log(
-    `Категория: ${liItemRef[i].children[0].textContent}`,
-    `Количество елементов: ${liItemRef[i].children[1].childElementCount}`
-  )
-}
+const categoriesRef = document.querySelectorAll('li.item');
+console.log(`В списке ${categoriesRef.length} категории.`);
+
+
+categoriesRef.forEach(element => {
+     const listRef = element.querySelectorAll('ul > li');
+     const title = element.firstElementChild.textContent;
+     console.log(`Категория: ${title}\nКоличество элементов: ${listRef.length}`);
+});

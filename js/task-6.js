@@ -1,13 +1,13 @@
-const validInputRef = document.querySelector(`#validation-input`)
+const inputRef = document.querySelector('#validation-input');
 
-validInputRef.addEventListener(`blur`, () => {
-  if (
-    validInputRef.value.length < validInputRef.getAttribute(`data-length`) ||
-    validInputRef.value.length > validInputRef.getAttribute(`data-length`)
-  ) {
-    validInputRef.classList.add(`invalid`)
+inputRef.addEventListener('change', changeClass);
+
+function changeClass (event) {
+  if(event.target.value.length === Number(event.target.dataset.length)) {
+    inputRef.classList.add('valid');
+    inputRef.classList.remove('invalid');
   } else {
-    validInputRef.classList.remove(`invalid`)
-    validInputRef.classList.add(`valid`)
-  }
-})
+  inputRef.classList.add('invalid');
+  event.target.classList.remove('valid');
+}
+}
